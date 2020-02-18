@@ -24,6 +24,8 @@ export default {
     foundItem.checked = !foundItem.checked;
   },
 
+
+
   findAndUpdateName: function(id, newName) {
     try {
       item.validateName(newName);
@@ -37,6 +39,10 @@ export default {
   findAndDelete: function(id) {  
     let index = this.items.findIndex(element => element.id === id);
     this.items.splice(index, 1);
+  },
+
+  toggleCheckedFilter: function() {
+    this.hideCheckedItems = !this.hideCheckedItems;
   }
 };
 
